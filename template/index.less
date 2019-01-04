@@ -1,0 +1,67 @@
+// 全局样式覆盖
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+/*消除点击区域灰色背景（使用ios）*/
+html,body{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+	font-family: 'PingFangSC-Regular','Microsoft Yahei', '微软雅黑', '宋体';
+  background-color: #f9f9f9;
+	letter-spacing: 0;
+	width:100%;
+	height:100%;
+}
+img{
+	width:100%;
+	height:100%;
+	font-size:0;
+	display: block;
+}
+span{
+	display:inline-block;
+}
+i{
+	font-style: normal;
+}
+a{
+	text-decoration: none;
+}
+/*清除浮动*/
+.clearfix:after { content: ""; display: block; visibility: hidden; height: 0; clear: both; }
+.clearfix { zoom: 1; }
+/*弹窗蒙版*/
+.mask{
+	width:100%;
+	height:100%;
+	background:#000;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index: 10;
+	transition:all .3s;
+	opacity:0;
+	transform: scale(0);	
+}
+.maskActive{
+	opacity: .6;
+	transform: scale(1);
+}
+.maskDefault{
+	width:100%;
+	height:100%;
+	background:#000;
+	position: fixed;
+	left:0;
+	z-index: 10;
+	opacity: .4;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
